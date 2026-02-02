@@ -1,0 +1,155 @@
+/* Course: 5CS045 Full Stack Development
+    Project: Support Ticket System
+    Stylesheet: Main CSS
+*/
+
+/* --- 1. General Page Setup --- */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Safe, standard fonts */
+    background-color: #f4f4f4; /* Light grey background is easier on eyes */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark grey text instead of pure black */
+}
+
+/* --- 2. Navigation Bar --- */
+nav {
+    background-color: #333; /* Dark header */
+    overflow: hidden;
+    padding: 15px 20px;
+    display: flex; /* Aligns links in a row */
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #555; /* Highlight effect on hover */
+    color: white;
+}
+
+/* Push the Login/Logout button to the far right */
+nav a:last-child {
+    margin-left: auto;
+    background-color: #d9534f; /* Reddish colour for actions */
+}
+
+/* --- 3. Main Container (Card Style) --- */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto; /* Centers the box */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle drop shadow */
+}
+
+/* --- 4. Typography --- */
+h2 {
+    border-bottom: 2px solid #ddd; /* Underline headings */
+    padding-bottom: 10px;
+    color: #444;
+}
+
+/* --- 5. Forms and Inputs --- */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block; /* Forces label to be on its own line */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style all text inputs the same way */
+input[type="text"], 
+input[type="password"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
+
+/* --- 6. Buttons --- */
+button {
+    background-color: #007bff; /* Standard Bootstrap Blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
+
+/* --- 7. Tables (For Dashboard) --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes spaces between borders */
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- 8. Status Badges (Coloured labels) --- */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Specific colours for each status */
+.open { 
+    background-color: #28a745; /* Green */
+}
+.in-progress { 
+    background-color: #ffc107; /* Yellow/Orange */
+    color: black; /* Black text for better contrast */
+}
+.resolved { 
+    background-color: #6c757d; /* Grey */
+}
+
+/* --- 9. Links --- */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
