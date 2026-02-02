@@ -7,7 +7,7 @@
 You can access the hosted project here:  
 http://103.41.173.36/~np03cs4a240181/ticket_system/public/index.php
 
----
+
 
 ##  Login Credentials
 Use these details to log in as the Administrator:
@@ -16,7 +16,7 @@ Use these details to log in as the Administrator:
 
 *(You can also register new users or use the seeded test accounts)*
 
----
+
 
 ##  Features Implemented
 
@@ -38,16 +38,17 @@ Use these details to log in as the Administrator:
 * **Session Management:** Secure login/logout system with `session_destroy()` and access control checks.
 * **Password Hashing:** User passwords are securely hashed using `password_hash()` (Bcrypt).
 
----
+
 
 ##  Known Issues / Limitations
 * **Mobile Responsiveness:** The table layout is optimized for desktop views and may require scrolling on very small mobile screens.
 * **Browser Caching:** If the Live Search feature does not appear immediately, a hard refresh (Ctrl+F5) may be required to clear old JavaScript cache.
 
----
+
 
 ## 📂 Project Structure
 * `config/` - Database connection settings.
 * `public/` - Main accessible pages (index, search, add, edit).
 * `includes/` - Reusable components (header, footer, functions).
 * `assets/` - CSS styles and JavaScript files.
+
