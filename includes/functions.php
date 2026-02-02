@@ -23,4 +23,19 @@ function requireAdmin() {
 function e($string) {
     return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 }
+
+// 🔒 CSRF 1: Generate a Token
+function getCsrfToken() {
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    return $_SESSION['csrf_token'];
+}
+
+// 🔒 CSRF 2: Verify the Token
+function verifyCsrfToken($token) {
+    if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
+        die("CSRF Validation Failed: Security Token Invalid.");
+    }
+}
 ?>

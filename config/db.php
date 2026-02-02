@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db   = 'helpdesk_db';
-$user = 'root';
-$pass = '';
+$db   = 'np03cs4a240181';
+$user = 'np03cs4a240181';
+$pass = 'eguVWL3REu';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);

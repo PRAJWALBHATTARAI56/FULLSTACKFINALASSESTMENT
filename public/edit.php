@@ -8,6 +8,10 @@ requireAdmin(); // Security Check
 $id = $_GET['id'] ?? 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // 🔒 CSRF CHECK: Stop hackers here
+    verifyCsrfToken($_POST['csrf_token']);
+
     $status = $_POST['status'];
     $reply = $_POST['admin_response'];
     
@@ -25,6 +29,8 @@ $t = $stmt->fetch();
 <h2>Edit Ticket #<?= e($t['id']) ?></h2>
 
 <form method="POST">
+    <input type="hidden" name="csrf_token" value="<?= getCsrfToken() ?>">
+
     <label>Status</label>
     <select name="status">
         <option <?= $t['status']=='Open'?'selected':'' ?>>Open</option>

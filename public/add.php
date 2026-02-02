@@ -5,6 +5,10 @@ include '../includes/header.php';
 requireLogin();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // 🔒 CSRF CHECK: Stop hackers here
+    verifyCsrfToken($_POST['csrf_token']);
+
     $username = $_SESSION['username'];
     $type = $_POST['issue_type'];
     $priority = $_POST['priority'];
@@ -19,6 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <h2>Create New Ticket</h2>
 <form method="POST">
+    <input type="hidden" name="csrf_token" value="<?= getCsrfToken() ?>">
+
     <label>Issue Type</label>
     <select name="issue_type">
         <option>Technical</option>
